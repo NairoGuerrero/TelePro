@@ -4,13 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}TelePro{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}At Telepro, we specialize in delivering top-tier customer support and back-office solutions to businesses across the United States.{% endblock %}">
+    <meta name="keywords" content="telecommunications, VoIP, fiber-optic, mobile networks, broadband, wireless solutions">
+    <meta name="author" content="Telepro">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{% block og_title %}Telepro | Your Trusted Call Center Partner{% endblock %}">
+    <meta property="og:description" content="At Telepro, we specialize in delivering top-tier customer support and back-office solutions to businesses across the United States.">
+    <meta property="og:image" content="{% static 'images/about.webp' %}">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>{% block title %}TelePro | Your Trusted Call Center Partner{% endblock %}</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="{% static 'css/output.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
+    {% block extra_css %}{% endblock %}
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body class="bg-light text-text-primary font-sans antialiased">
 
-    {% block content %}{% endblock %}
+    {% include 'components/navbar.html' %}
 
-    {% block scripts %}{% endblock %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include 'components/footer.html' %}
+    {% include 'components/whatsapp_button.html' %}
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80,
+        });
+    </script>
+
+    {% block extra_js %}{% endblock %}
 </body>
 </html>
