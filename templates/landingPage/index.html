@@ -1,89 +1,398 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<footer class="bg-dark text-white">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-            <!-- Brand -->
-            <div class="lg:col-span-1">
-                <a href="{% url 'landing:index' %}">
-                    <img src="{% static 'images/logo.png' %}" alt="Telepro" class="h-9 w-auto brightness-0 invert">
-                </a>
-                <p class="mt-5 text-gray-400 text-sm leading-relaxed">
-                    At Telepro, we believe in offering more than just connectivity. We are committed to providing comprehensive telecommunication solutions that give you peace of mind.
+{% block title %}TelePro | Your Trusted Call Center Partner{% endblock %}
+
+{% block content %}
+
+<!-- ==================== HERO SECTION ==================== -->
+<section class="relative min-h-screen flex items-center overflow-hidden pt-20" style="background: linear-gradient(135deg, #FFF8F3 0%, #FFF0E6 50%, #FFF8F3 100%);">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-[200px]"></div>
+    <div class="absolute bottom-10 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl"></div>
+    <div class="absolute top-1/4 right-1/4 w-32 h-32 bg-primary-light/20 rounded-full blur-2xl"></div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <p class="text-primary font-semibold text-lg mb-4 tracking-wide">Welcome to Telepro</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-dark leading-tight">
+                    Lender Call Center Services
+                    <span class="block mt-2 bg-gradient-to-r from-primary-dark to-primary-light bg-clip-text text-transparent">
+                        Built for Modern Consumer Lending
+                    </span>
+                </h1>
+                <p class="mt-6 text-text-secondary text-lg leading-relaxed max-w-xl">
+                    In today's consumer lending environment, borrower communication is no longer a secondary operational function — it is a primary driver of portfolio performance, repayment stability, regulatory alignment, and long-term customer retention.
                 </p>
-                <div class="flex gap-4 mt-6">
-                    <a href="https://www.linkedin.com/company/teleprofessionals" target="_blank"
-                       class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors duration-300">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    </a>
-                    <a href="https://www.instagram.com/teleprooficial" target="_blank"
-                       class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors duration-300">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                    </a>
+                <a href="#services"
+                   class="inline-flex items-center mt-8 px-8 py-4 bg-gradient-to-r from-primary-dark to-primary-light text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    Explore Our Services
+                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200" class="hidden lg:block">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary-light/20 rounded-3xl blur-3xl"></div>
+                    <img src="{% static 'images/banner.webp' %}" alt="Telepro Call Center" class="relative w-full object-contain drop-shadow-2xl">
                 </div>
             </div>
+        </div>
+    </div>
+</section>
 
-            <!-- Quick Links -->
-            <div>
-                <h6 class="text-lg font-semibold mb-5">Quick Links</h6>
-                <ul class="space-y-3">
-                    <li><a href="{% url 'landing:index' %}" class="text-gray-400 hover:text-primary transition-colors text-sm">Home</a></li>
-                    <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors text-sm">About</a></li>
-                    <li><a href="#services" class="text-gray-400 hover:text-primary transition-colors text-sm">Services</a></li>
-                    <li><a href="#features" class="text-gray-400 hover:text-primary transition-colors text-sm">Features</a></li>
-                    <li><a href="#faq" class="text-gray-400 hover:text-primary transition-colors text-sm">FAQ</a></li>
-                    <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors text-sm">Contact</a></li>
-                </ul>
+<!-- ==================== ABOUT SECTION ==================== -->
+<section id="about" class="py-20 lg:py-28 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div data-aos="fade-up" class="order-2 lg:order-1">
+                <img src="{% static 'images/about.webp' %}" alt="About Telepro" class="w-full rounded-2xl">
             </div>
-
-            <!-- Services -->
-            <div>
-                <h6 class="text-lg font-semibold mb-5">Our Services</h6>
-                <ul class="space-y-3">
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition-colors text-sm">Loan Servicing Call Center</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition-colors text-sm">Collections Call Center</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition-colors text-sm">Inbound & Outbound Calls</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition-colors text-sm">Live Chat Support</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition-colors text-sm">Email & Ticket Management</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Info -->
-            <div>
-                <h6 class="text-lg font-semibold mb-5">Get In Touch</h6>
-                <div class="space-y-4">
-                    <a href="https://maps.app.goo.gl/sW2z1BwFii5td1QWA" target="_blank" class="flex items-start gap-3 text-gray-400 hover:text-primary transition-colors text-sm">
-                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C7.6 0 4 3.6 4 8c0 4.6 7 13.3 7.3 13.7.2.2.4.3.7.3s.5-.1.7-.3C13 21.3 20 12.6 20 8c0-4.4-3.6-8-8-8zm0 10.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 5.5 12 5.5s2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z"/></svg>
-                        Carrera 16 Bis # 9-39, Local 103, Edificio Sol del Este. Pereira, Colombia.
+            <div data-aos="fade-up" data-aos-delay="100" class="order-1 lg:order-2">
+                <h2 class="text-3xl sm:text-4xl font-bold text-dark">
+                    About <span class="text-primary">Telepro</span>
+                </h2>
+                <p class="mt-4 text-primary font-semibold">
+                    Secure. Supervised. Structured. Scalable. Lending-Focused.
+                </p>
+                <p class="mt-4 text-text-secondary leading-relaxed">
+                    TELEPRO delivers specialized <strong class="text-text-primary">lender call center services</strong> engineered exclusively for U.S. consumer lending institutions that require structured oversight, disciplined workforce management, and secure operational infrastructure.
+                </p>
+                <p class="mt-4 text-text-secondary leading-relaxed">
+                    We are not a generic outsourcing provider. We are a purpose-built <strong class="text-text-primary">consumer lending call center outsourcing partner</strong> designed around loan servicing workflows, collections performance metrics, borrower lifecycle engagement, and compliance-sensitive communication standards.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-primary-dark to-primary-light text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                        Get In Touch
                     </a>
-                    <a href="https://wa.me/+573105889722?text=Hi!%20I'm%20interested%20in%20your%20services." rel="noopener" target="_blank" class="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors text-sm">
-                        <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M20.5 3.5C18.2 1.2 15.3 0 12 0 5.4 0 0 5.4 0 12c0 2.2.5 4.3 1.4 6.1L0 24l5.9-1.5c1.7.9 3.8 1.5 6.1 1.5 6.6 0 12-5.4 12-12 0-3.3-1.2-6.2-3.5-8.5z"/></svg>
-                        +57 310 588 9722
-                    </a>
-                    <a href="tel:+573228420858" class="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors text-sm">
-                        <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.2 2.8 3.8 5.4 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.5 0 .9.4.9.9v3.7c0 .5-.4.9-.9.9C9.2 21.1 1.5 13.4 1.5 2.4c0-.5.4-.9.9-.9h3.7c.5 0 .9.4.9.9 0 1.2.2 2.5.6 3.7.1.4 0 .8-.3 1.1l-2.2 2.2c.2.4.8 1 1.5 1.4z"/></svg>
-                        +57 322 842 0858
-                    </a>
-                    <a href="mailto:admin@teleprofessionals.co" class="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors text-sm">
-                        <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M2 4c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1H2zm1 2h18v1.3l-9 6.2-9-6.2V6zm0 3.7l8.5 5.9c.3.2.7.2 1 0L21 9.7V18H3V9.7z"/></svg>
-                        admin@teleprofessionals.co
-                    </a>
-                    <a href="mailto:talent@teleprofessionals.co" class="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors text-sm">
-                        <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M2 4c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1H2zm1 2h18v1.3l-9 6.2-9-6.2V6zm0 3.7l8.5 5.9c.3.2.7.2 1 0L21 9.7V18H3V9.7z"/></svg>
-                        talent@teleprofessionals.co
+                    <a href="#services" class="inline-flex items-center justify-center px-8 py-3.5 border-2 border-primary text-text-primary font-semibold rounded-full hover:bg-gradient-to-r hover:from-primary-dark hover:to-primary-light hover:text-white hover:border-transparent transition-all duration-300">
+                        View Details
                     </a>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <!-- Copyright -->
-        <div class="border-t border-white/10 mt-12 pt-8 text-center">
-            <p class="text-gray-500 text-sm">
-                Copyright &copy; 2026. Teleprofessionals. All Rights Reserved |
-                <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a> |
-                <a href="#" class="hover:text-primary transition-colors">Colombian Data Processing Policy (Español)</a> |
-                <a href="#" class="hover:text-primary transition-colors">Sitemap</a>
+<!-- ==================== SERVICES SECTION ==================== -->
+<section id="services" class="py-20 lg:py-28 bg-light">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div data-aos="fade-up" class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-dark">Customer Support Services</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div data-aos="fade-up" data-aos-delay="0"
+                 class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-gray-100 hover:border-primary/30 transition-all duration-300 hover:-translate-y-2">
+                <div class="w-14 h-14 bg-gradient-to-r from-primary-dark to-primary-light rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">
+                    01
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-4">Loan Servicing Call Center</h3>
+                <p class="text-text-secondary leading-relaxed text-sm">
+                    Clear communication reduces friction and builds borrower confidence. Our loan servicing call center supports inbound borrower interactions with clarity, professionalism, and structured documentation. Loan servicing communication often determines how borrowers perceive your organization; confusion, delayed responses, or inconsistent messaging can increase dissatisfaction and escalate complaints.
+                </p>
+                <a href="#" class="inline-flex items-center mt-6 text-primary font-semibold text-sm group-hover:gap-2 transition-all duration-300">
+                    View Details
+                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Service 2 -->
+            <div data-aos="fade-up" data-aos-delay="100"
+                 class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-gray-100 hover:border-primary/30 transition-all duration-300 hover:-translate-y-2">
+                <div class="w-14 h-14 bg-gradient-to-r from-primary-dark to-primary-light rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">
+                    02
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-4">Collections Call Center for Lenders</h3>
+                <p class="text-text-secondary leading-relaxed text-sm">
+                    Collections communication is one of the most sensitive aspects of lending operations. Borrowers experiencing financial stress require professional, empathetic, and structured engagement. Our collections call center services are designed to improve repayment performance while maintaining borrower dignity and brand integrity.
+                </p>
+                <a href="#" class="inline-flex items-center mt-6 text-primary font-semibold text-sm group-hover:gap-2 transition-all duration-300">
+                    View Details
+                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Service 3 -->
+            <div data-aos="fade-up" data-aos-delay="200"
+                 class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-gray-100 hover:border-primary/30 transition-all duration-300 hover:-translate-y-2">
+                <div class="w-14 h-14 bg-gradient-to-r from-primary-dark to-primary-light rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">
+                    03
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-4">Inbound & Outbound Call Handling</h3>
+                <p class="text-text-secondary leading-relaxed text-sm">
+                    TELEPRO provides comprehensive inbound and outbound call handling tailored specifically to lending environments. Inbound communication requires patience, clarity, and efficiency, and our inbound specialists are trained to handle product inquiries, account questions, technical servicing support, billing clarification, complaint intake and resolution, and general borrower support.
+                </p>
+                <a href="#" class="inline-flex items-center mt-6 text-primary font-semibold text-sm group-hover:gap-2 transition-all duration-300">
+                    View Details
+                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Service 4 -->
+            <div data-aos="fade-up" data-aos-delay="0"
+                 class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-gray-100 hover:border-primary/30 transition-all duration-300 hover:-translate-y-2">
+                <div class="w-14 h-14 bg-gradient-to-r from-primary-dark to-primary-light rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">
+                    04
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-4">Live Chat Support</h3>
+                <p class="text-text-secondary leading-relaxed text-sm">
+                    Real-time digital engagement is now a borrower expectation. Our live chat services provide real-time application support, product clarification, account assistance, payment troubleshooting, and guided borrower navigation. Live chat improves conversion rates, reduces inbound call volume, and enhances borrower satisfaction.
+                </p>
+                <a href="#" class="inline-flex items-center mt-6 text-primary font-semibold text-sm group-hover:gap-2 transition-all duration-300">
+                    View Details
+                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Service 5 -->
+            <div data-aos="fade-up" data-aos-delay="100"
+                 class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-gray-100 hover:border-primary/30 transition-all duration-300 hover:-translate-y-2">
+                <div class="w-14 h-14 bg-gradient-to-r from-primary-dark to-primary-light rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">
+                    05
+                </div>
+                <h3 class="text-xl font-bold text-dark mb-4">Email Support & Ticket Management</h3>
+                <p class="text-text-secondary leading-relaxed text-sm">
+                    Email remains essential for borrowers who require detailed explanations and written confirmation. Our email support services include structured response templates, ticket categorization and prioritization, escalation routing, SLA-aligned response times, and brand-consistent communication.
+                </p>
+                <a href="#" class="inline-flex items-center mt-6 text-primary font-semibold text-sm group-hover:gap-2 transition-all duration-300">
+                    View Details
+                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== NEW REALITY SECTION ==================== -->
+<section class="py-20 lg:py-28 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl font-bold text-dark">The New Reality of Lending Operations</h2>
+                <p class="mt-6 text-text-secondary leading-relaxed">
+                    <strong class="text-text-primary">Consumer lenders face increasing complexity across every operational dimension:</strong>
+                </p>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="100" class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex items-start gap-3 p-4 rounded-xl bg-light">
+                    <span class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                    <span class="text-text-secondary">Borrowers expect fast, clear, and empathetic support</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-xl bg-light">
+                    <span class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                    <span class="text-text-secondary">Loan servicing platforms require seamless system integration</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-xl bg-light">
+                    <span class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                    <span class="text-text-secondary">Repayment performance directly impacts portfolio valuation</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-xl bg-light">
+                    <span class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                    <span class="text-text-secondary">Compliance oversight demands documentation discipline</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-xl bg-light">
+                    <span class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                    <span class="text-text-secondary">Seasonal spikes (tax season, renewals, funding cycles) strain staffing capacity</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-xl bg-light">
+                    <span class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                    <span class="text-text-secondary">Rising domestic staffing costs limit scalable growth</span>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200" class="mt-10">
+                <p class="text-text-secondary leading-relaxed">
+                    Traditional call centers often struggle to meet these demands simultaneously. Offshore vendors may reduce cost but introduce operational and security risks. Domestic call centers provide quality but at rates that restrict flexibility and scalability.
+                </p>
+                <p class="mt-6 text-xl font-bold text-dark">TELEPRO was engineered to deliver a balanced solution.</p>
+                <p class="mt-4 text-text-secondary font-semibold">We combine:</p>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="300" class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex items-start gap-3 p-4 rounded-xl border border-primary/20 bg-primary/5">
+                    <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="text-text-primary text-sm">Lending-trained bilingual (English/Spanish) agents</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-xl border border-primary/20 bg-primary/5">
+                    <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="text-text-primary text-sm">100% supervised on-site workforce (no remote-agent risk)</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-xl border border-primary/20 bg-primary/5">
+                    <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="text-text-primary text-sm">Enterprise-grade cybersecurity and monitoring systems</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-xl border border-primary/20 bg-primary/5">
+                    <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="text-text-primary text-sm">Structured quality assurance aligned with lending KPIs</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-xl border border-primary/20 bg-primary/5">
+                    <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="text-text-primary text-sm">Rapid headcount scalability</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-xl border border-primary/20 bg-primary/5">
+                    <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="text-text-primary text-sm">Transparent pricing at nearly half the cost of U.S. call centers</span>
+                </div>
+            </div>
+
+            <p data-aos="fade-up" class="mt-8 text-text-secondary leading-relaxed">
+                This is structured, secure, performance-driven lender call center outsourcing.
             </p>
         </div>
     </div>
-</footer>
+</section>
+
+<!-- ==================== BORROWER LIFECYCLE SECTION ==================== -->
+<section id="features" class="py-20 lg:py-28 bg-light">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div data-aos="fade-up" class="max-w-3xl mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-dark">End-to-End Borrower Lifecycle Support</h2>
+            <p class="mt-4 text-text-secondary leading-relaxed">Our <strong class="text-text-primary">lending call center solutions</strong> are designed to support the entire borrower journey — from application assistance to repayment follow-up and renewal.</p>
+        </div>
+
+        <!-- Feature 1 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            <div data-aos="fade-right">
+                <img src="{% static 'images/feature-1.jpg' %}" alt="Loan Servicing Support" class="w-full rounded-2xl shadow-lg">
+            </div>
+            <div data-aos="fade-left">
+                <h3 class="text-2xl sm:text-3xl font-bold text-dark">Loan Servicing Support</h3>
+                <p class="mt-4 text-text-secondary leading-relaxed">Clear communication reduces confusion, repeat calls, and borrower frustration. Our loan servicing call center teams provide:</p>
+                <ul class="mt-4 space-y-3">
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Account balance inquiries</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Payment scheduling and assistance</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Renewal and extension clarification</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Hardship communication</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Document verification and follow-ups</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Complaint resolution and structured escalation</span></li>
+                </ul>
+                <p class="mt-4 text-text-secondary leading-relaxed">We do more than answer questions - we reinforce borrower understanding, improve satisfaction, and ensure documentation accuracy within your Loan Management System (LMS) and CRM platforms.</p>
+            </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            <div data-aos="fade-left" class="order-1 lg:order-2">
+                <img src="{% static 'images/feature-2.jpg' %}" alt="Collections Communication" class="w-full rounded-2xl shadow-lg">
+            </div>
+            <div data-aos="fade-right" class="order-2 lg:order-1">
+                <h3 class="text-2xl sm:text-3xl font-bold text-dark">Collections Communication</h3>
+                <p class="mt-4 text-text-secondary leading-relaxed">Collections require balance: performance focus combined with professionalism and empathy.</p>
+                <p class="mt-4 text-text-secondary leading-relaxed">Our collections call center services are designed to:</p>
+                <ul class="mt-4 space-y-3">
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Improve early-stage repayment engagement</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Reduce delinquency roll rates</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Track and follow up on promise-to-pay commitments</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Maintain borrower respect</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Provide structured escalation for complex cases</span></li>
+                </ul>
+                <p class="mt-4 text-text-secondary leading-relaxed">Through disciplined QA monitoring and KPI tracking, we ensure communication remains aligned with your operational standards.</p>
+            </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <img src="{% static 'images/feature-3.jpg' %}" alt="Omnichannel Engagement" class="w-full rounded-2xl shadow-lg">
+            </div>
+            <div data-aos="fade-left">
+                <h3 class="text-2xl sm:text-3xl font-bold text-dark">Omnichannel Borrower Engagement</h3>
+                <p class="mt-4 text-text-secondary leading-relaxed">Modern borrowers expect flexibility in communication. TELEPRO supports:</p>
+                <ul class="mt-4 space-y-3">
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Inbound call handling</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Outbound outreach campaigns</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Live chat support</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Email support and ticket management</span></li>
+                </ul>
+                <p class="mt-4 text-text-secondary leading-relaxed">By providing omnichannel support within a unified workflow, we ensure consistency across every borrower interaction.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== TELEPRO ADVANTAGE SECTION ==================== -->
+<section class="py-20 lg:py-28 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div data-aos="fade-up" class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-dark">The TELEPRO Advantage</h2>
+            <p class="mt-4 text-text-secondary max-w-2xl mx-auto">Lenders evaluating call center outsourcing are ultimately assessing risk and performance impact. With TELEPRO, you gain:</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div data-aos="fade-up" data-aos-delay="0" class="text-center p-8 rounded-2xl hover:bg-light transition-colors duration-300">
+                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-3">Security-first operational infrastructure</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">We implement secure systems, protected networks, and strict access controls to safeguard borrower data and maintain strong compliance standards.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" class="text-center p-8 rounded-2xl hover:bg-light transition-colors duration-300">
+                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-3">Lending-specific workforce training</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">Our agents receive specialized training in mortgage and lending workflows, enabling them to support borrowers with accuracy and professionalism.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="text-center p-8 rounded-2xl hover:bg-light transition-colors duration-300">
+                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"/></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-3">Bilingual communication capabilities</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">We provide bilingual support to communicate clearly with diverse borrower groups, improving accessibility and strengthening customer relationships.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="0" class="text-center p-8 rounded-2xl hover:bg-light transition-colors duration-300">
+                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-3">Structured QA and reporting transparency</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">Our quality assurance process includes monitoring, performance reviews, and clear reporting to maintain service standards and operational visibility.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" class="text-center p-8 rounded-2xl hover:bg-light transition-colors duration-300">
+                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"/></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-3">Rapid scalability during peak periods</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">Our teams can quickly scale operations to manage higher call volumes during peak lending periods while maintaining consistent service quality.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="text-center p-8 rounded-2xl hover:bg-light transition-colors duration-300">
+                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg>
+                </div>
+                <h3 class="text-lg font-bold text-dark mb-3">Cost-efficiency without sacrificing oversight</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">Our operational model helps reduce service costs while maintaining strong management oversight, ensuring consistent performance and accountability.</p>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" class="text-center mt-12">
+            <p class="text-xl font-bold text-dark">We operate as a secure, scalable extension of your internal lending operations.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CTA SECTION ==================== -->
+<section id="contact" class="py-20 lg:py-28">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative overflow-hidden rounded-3xl p-10 sm:p-16 text-center" style="background: linear-gradient(-150deg, #f26325 7.64%, #faca2b 120.07%);">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10">
+                <div class="absolute top-10 left-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+                <div class="absolute bottom-10 right-10 w-60 h-60 bg-white rounded-full blur-3xl"></div>
+            </div>
+            <div data-aos="zoom-in" class="relative z-10 max-w-3xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Get Started with Telepro Today!</h2>
+                <p class="mt-6 text-white/90 text-lg leading-relaxed">
+                    We are committed to delivering high-quality, customized solutions that drive efficiency, customer satisfaction, and business growth. Partner with Telepro and take your customer service and back-office operations to the next level! Contact us today to discuss your outsourcing needs and learn how we can help your business thrive.
+                </p>
+                <a href="#contact" class="inline-flex items-center mt-8 px-10 py-4 bg-white text-primary-dark font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
