@@ -1,11 +1,115 @@
 {% extends 'base.html' %}
-{% block title %}Services | TelePro{% endblock %}
+{% load static %}
+
+{% block title %}Features | TelePro{% endblock %}
+
 {% block content %}
-{% include 'components/page_hero.html' with page_title="Services" heading="Our <span class='text-primary'>Services</span>" %}
-<section class="py-20 bg-white">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p class="text-text-secondary text-lg">Full services page coming soon.</p>
+
+{% include 'components/page_hero.html' with page_title="Features" heading="Our <span class='text-primary'>Features</span>" %}
+
+<section class="py-20 lg:py-28 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Feature 1: Customer Retention -->
+        <div data-aos="fade-up" class="bg-light rounded-3xl p-8 lg:p-12 mb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="{% static 'images/customerretentionengagementprograms.png' %}" alt="Customer Retention" class="w-full rounded-2xl">
+                </div>
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-dark">Customer Retention & Engagement Programs</h2>
+                    <p class="mt-2 text-primary font-semibold">Strengthening Long-Term Borrower Relationships</p>
+                    <p class="mt-4 text-text-secondary leading-relaxed">Retention is often overlooked in lending operations. However, proactive engagement supports portfolio continuity and lifetime value.</p>
+                    <p class="mt-3 text-text-secondary leading-relaxed">Our retention strategies include:</p>
+                    <ul class="mt-3 space-y-2">
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Personalized borrower outreach</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Renewal reminder programs</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Educational content sharing</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Feedback surveys</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Loyalty-based engagement campaigns</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Reactivation of inactive borrowers</span></li>
+                    </ul>
+                    <p class="mt-4 text-text-secondary leading-relaxed">Engaged borrowers are more likely to remain active, respond to communication, and maintain repayment discipline.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 2: Complaint Resolution -->
+        <div data-aos="fade-up" class="bg-light rounded-3xl p-8 lg:p-12 mb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-1 lg:order-2">
+                    <img src="{% static 'images/complaintresolutionescalationmanagement.png' %}" alt="Complaint Resolution" class="w-full rounded-2xl">
+                </div>
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-dark">Complaint Resolution & Escalation Management</h2>
+                    <p class="mt-2 text-primary font-semibold">Turning Dissatisfaction into Loyalty</p>
+                    <p class="mt-4 text-text-secondary leading-relaxed">Complaints are inevitable. Mishandled complaints damage brand trust and increase churn.</p>
+                    <p class="mt-3 text-text-secondary leading-relaxed">Our structured complaint resolution framework includes:</p>
+                    <ul class="mt-3 space-y-2">
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Active listening</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Empathetic acknowledgment</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Timely issue resolution</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Defined escalation tiers</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Cross-department collaboration</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Follow-up confirmation</span></li>
+                    </ul>
+                    <p class="mt-4 text-text-secondary leading-relaxed">We log every complaint and track resolution timelines to ensure accountability.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 3: Workflow Integration -->
+        <div data-aos="fade-up" class="bg-light rounded-3xl p-8 lg:p-12 mb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="{% static 'images/workflowintegrationreportingtransparency.png' %}" alt="Workflow Integration" class="w-full rounded-2xl">
+                </div>
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-dark">Workflow Integration & Reporting Transparency</h2>
+                    <p class="mt-4 text-text-secondary leading-relaxed font-semibold">We integrate seamlessly with:</p>
+                    <ul class="mt-3 space-y-2">
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Loan Management Systems (LMS)</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">CRM platforms</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Underwriting tools</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Reporting dashboards & Ticketing systems</span></li>
+                    </ul>
+                    <p class="mt-4 text-text-secondary leading-relaxed font-semibold">Our reporting includes:</p>
+                    <ul class="mt-3 space-y-2">
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-accent-green mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">First Call Resolution (FCR) & CSAT</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-accent-green mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Promise-to-Pay (PTP) rates</span></li>
+                        <li class="flex items-start gap-3"><svg class="w-5 h-5 text-accent-green mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary text-sm">Escalation trends & Performance benchmarks</span></li>
+                    </ul>
+                    <p class="mt-4 text-text-secondary leading-relaxed">Outsourcing should increase visibility — not reduce it. TELEPRO delivers transparency at every level.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 4: Security & Compliance -->
+        <div data-aos="fade-up" class="bg-dark rounded-3xl p-8 lg:p-12 text-white">
+            <h2 class="text-2xl sm:text-3xl font-bold">Security & Compliance</h2>
+            <p class="mt-2 text-primary-light font-semibold">Secure & Compliance-Focused Call Center Services for Financial Institutions</p>
+            <p class="mt-6 text-gray-300 leading-relaxed">Security and operational discipline are foundational to TELEPRO's model. As a secure call center for lenders, we were built to operate within financial-services environments that demand oversight, documentation, and data protection.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div class="bg-white/5 rounded-2xl p-6">
+                    <h4 class="font-bold text-lg mb-3">Facility Security</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Biometric entry access, 24/7 CCTV monitoring, no personal device policy on production floor, secured storage lockers, controlled workstation access, and redundant internet connectivity.</p>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-6">
+                    <h4 class="font-bold text-lg mb-3">Cybersecurity</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Real-time monitoring systems, automated alerts for unauthorized activity, endpoint protection technologies, encrypted VPN workstation connectivity, and restricted system access controls.</p>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-6">
+                    <h4 class="font-bold text-lg mb-3">Compliance Training</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Lending-specific communication training, script adherence education, escalation protocol guidance, documentation discipline instruction, and ongoing refresher sessions.</p>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-6">
+                    <h4 class="font-bold text-lg mb-3">Business Continuity</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">24/7 in-house IT support, multiple fiber connections with failover routing, UPS and generator backup systems, cloud-stored workflow backups, and disaster recovery planning.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
 {% include 'components/cta_section.html' %}
 {% endblock %}
