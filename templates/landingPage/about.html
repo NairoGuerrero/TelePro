@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About | TelePro{% endblock %}
+
+{% block content %}
+
+{% include 'components/page_hero.html' with page_title="About" heading="About <span class='text-primary'>Telepro</span>" %}
+
+<!-- Intro Section -->
+<section class="py-20 lg:py-28 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div data-aos="fade-right" class="order-2 lg:order-1">
+                <img src="{% static 'images/about.webp' %}" alt="About Telepro" class="w-full rounded-2xl">
+            </div>
+            <div data-aos="fade-left" class="order-1 lg:order-2">
+                <h2 class="text-3xl sm:text-4xl font-bold text-dark">A Specialized Call Center Built for Consumer Lending Institutions</h2>
+                <p class="mt-5 text-text-secondary leading-relaxed">TELEPRO was founded to address a fundamental operational gap in financial services outsourcing.</p>
+                <p class="mt-4 text-text-secondary leading-relaxed">Most call centers are built for generalized customer support. Consumer lending requires far more discipline. Loan servicing and collections communication demand:</p>
+                <ul class="mt-4 space-y-3">
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Structured documentation</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Empathetic borrower engagement</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Defined escalation pathways</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Performance tracking aligned with repayment metrics</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Workforce stability</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Security-focused operational environments</span></li>
+                </ul>
+                <p class="mt-5 text-text-secondary leading-relaxed font-semibold">TELEPRO was engineered specifically around these requirements.</p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <a href="{% url 'landing:contact' %}" class="inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-primary-dark to-primary-light text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">Get In Touch</a>
+                    <a href="{% url 'landing:services' %}" class="inline-flex items-center justify-center px-8 py-3.5 border-2 border-primary text-text-primary font-semibold rounded-full hover:bg-gradient-to-r hover:from-primary-dark hover:to-primary-light hover:text-white hover:border-transparent transition-all duration-300">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Sections -->
+<section class="py-20 lg:py-28 bg-light">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Why Generic Outsourcing Falls Short -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            <div data-aos="fade-right">
+                <img src="{% static 'images/feature1.jpg' %}" alt="Why Generic Outsourcing Falls Short" class="w-full rounded-2xl shadow-lg">
+            </div>
+            <div data-aos="fade-left">
+                <h3 class="text-2xl sm:text-3xl font-bold text-dark">Why Generic Outsourcing Falls Short</h3>
+                <p class="mt-4 text-text-secondary leading-relaxed">Lenders often experience operational friction when working with traditional outsourcing providers:</p>
+                <ul class="mt-4 space-y-3">
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">High agent turnover disrupts borrower familiarity</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Inconsistent communication tone damages brand perception</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Limited financial-services training increases error rates</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Remote-agent models elevate data exposure risk</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Poor QA transparency limits oversight</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Difficulty scaling during peak periods</span></li>
+                </ul>
+                <p class="mt-4 text-text-secondary leading-relaxed">These weaknesses impact repayment behavior and borrower trust.</p>
+                <p class="mt-2 text-text-secondary leading-relaxed font-semibold">TELEPRO addresses these risks through structured workforce management and supervised on-site operations.</p>
+            </div>
+        </div>
+
+        <!-- Recruitment -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            <div data-aos="fade-left" class="order-1 lg:order-2">
+                <img src="{% static 'images/feature2.jpg' %}" alt="Recruitment Discipline" class="w-full rounded-2xl shadow-lg">
+            </div>
+            <div data-aos="fade-right" class="order-2 lg:order-1">
+                <h3 class="text-2xl sm:text-3xl font-bold text-dark">Recruitment Discipline & Workforce Quality</h3>
+                <p class="mt-4 text-text-secondary leading-relaxed">Borrower communication quality begins with recruitment rigor.</p>
+                <p class="mt-2 text-text-secondary leading-relaxed">Our hiring standards include:</p>
+                <ul class="mt-4 space-y-3">
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">CEFR C1+ English fluency for U.S.-aligned communication</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Spanish bilingual capability</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Prior experience in lending, collections, or financial services preferred</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Background verification and professionalism screening</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Personality assessments aligned with empathy and accountability</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Client participation in final agent interviews and approval</span></li>
+                </ul>
+                <p class="mt-4 text-text-secondary leading-relaxed font-semibold">We prioritize long-term workforce stability over short-term staffing volume.</p>
+            </div>
+        </div>
+
+        <!-- Culture -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <img src="{% static 'images/feature3.jpg' %}" alt="Culture & Retention" class="w-full rounded-2xl shadow-lg">
+            </div>
+            <div data-aos="fade-left">
+                <h3 class="text-2xl sm:text-3xl font-bold text-dark">Culture & Retention Strategy</h3>
+                <p class="mt-4 text-text-secondary leading-relaxed">High turnover undermines borrower trust and increases retraining costs. TELEPRO invests in retention through:</p>
+                <ul class="mt-4 space-y-3">
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">KPI-based performance incentives</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Career progression pathways</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Ongoing coaching and development</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Wellness initiatives to reduce burnout</span></li>
+                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-text-secondary">Team recognition programs</span></li>
+                </ul>
+                <p class="mt-4 text-text-secondary leading-relaxed">Agent familiarity strengthens borrower relationships. Stronger relationships support repayment consistency.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA with custom title -->
+{% include 'components/cta_section.html' with cta_title="Operational Philosophy" cta_text="Secure infrastructure + disciplined workforce + lending-specific training + structured QA oversight = sustainable portfolio performance support. We believe outsourcing should enhance control — not reduce it. TELEPRO provides lenders with transparency, accountability, and measurable results." %}
+
+{% endblock %}

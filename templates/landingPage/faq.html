@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}FAQ | TelePro{% endblock %}
+
+{% block content %}
+
+{% include 'components/page_hero.html' with page_title="FAQ" heading="Frequently Asked Questions" %}
+
+<section class="py-20 lg:py-28 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+            <div class="space-y-4">
+
+                <!-- FAQ Item Component Pattern -->
+                <div data-aos="fade-up" class="faq-item bg-light rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left cursor-pointer" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-dark pr-8">What makes TELEPRO different from traditional outsourcing providers?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-text-secondary leading-relaxed">TELEPRO is a specialized consumer lending call center designed exclusively for loan servicing, collections, and borrower engagement workflows. We are not a general BPO provider. Our agents are trained specifically in lending communication, and our infrastructure is built around financial-services security and oversight requirements.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="50" class="faq-item bg-light rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left cursor-pointer" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-dark pr-8">Are your agents remote?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-text-secondary leading-relaxed">No. TELEPRO operates a 100% supervised on-site workforce. We do not utilize remote-agent models. This structure significantly reduces data exposure risk and enhances operational discipline.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="faq-item bg-light rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left cursor-pointer" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-dark pr-8">Do you provide bilingual borrower support?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-text-secondary leading-relaxed">Yes. We provide bilingual English and Spanish agents with CEFR C1+ English fluency. Cultural alignment improves borrower engagement and communication clarity.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="faq-item bg-light rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left cursor-pointer" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-dark pr-8">What types of lenders do you support?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-text-secondary leading-relaxed">We support a range of U.S. consumer lending institutions, including installment lenders, auto finance companies, personal loan providers, online lending platforms, and specialty finance organizations. Our services align with servicing, collections, onboarding, and retention workflows.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="faq-item bg-light rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left cursor-pointer" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-dark pr-8">How do you ensure communication quality?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-text-secondary leading-relaxed">We maintain a structured QA framework that includes weekly call audits, script adherence monitoring, tone and empathy assessment, escalation documentation review, KPI reporting transparency, and monthly calibration meetings with clients. Our QA model reinforces consistency and accountability.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="faq-item bg-light rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left cursor-pointer" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-dark pr-8">How quickly can agents be deployed?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-text-secondary leading-relaxed">After workflow alignment and training customization, agents can go live within weeks. We also maintain scalability infrastructure to expand headcount rapidly during peak demand.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="faq-item bg-light rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left cursor-pointer" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-dark pr-8">Can we interview and approve agents?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-text-secondary leading-relaxed">Yes. Clients participate in final agent interviews and approval to ensure cultural and operational alignment.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="faq-item bg-light rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left cursor-pointer" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-dark pr-8">What security measures are in place?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-text-secondary leading-relaxed">Our infrastructure includes biometric facility access, 24/7 CCTV monitoring, no personal device production floor policy, encrypted VPN workstation environments, real-time monitoring systems, endpoint protection technologies, and redundant internet connectivity. Security is foundational to our operating model.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="faq-item bg-light rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left cursor-pointer" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-dark pr-8">How does TELEPRO support compliance alignment?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-text-secondary leading-relaxed">We align our training, QA processes, and documentation standards with your internal policies. While we do not replace your compliance function, we operate within structured communication frameworks to reinforce oversight.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="faq-item bg-light rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left cursor-pointer" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-dark pr-8">What reporting visibility do we receive?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-text-secondary leading-relaxed">Clients receive regular performance reporting, including First Call Resolution (FCR), Customer Satisfaction (CSAT), Promise-to-Pay (PTP) rates, call quality scoring, escalation trends, and operational performance metrics. Transparency is central to our partnership approach.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'components/cta_section.html' %}
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function toggleFaq(button) {
+        const item = button.closest('.faq-item');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+
+        // Close all others
+        document.querySelectorAll('.faq-item').forEach(other => {
+            if (other !== item) {
+                other.querySelector('.faq-content').classList.add('hidden');
+                other.querySelector('.faq-icon').classList.remove('rotate-180');
+            }
+        });
+
+        // Toggle current
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+    }
+</script>
+{% endblock %}

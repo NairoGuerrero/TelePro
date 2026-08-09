@@ -1,0 +1,16 @@
+<!-- Reusable page hero with breadcrumb -->
+<section class="relative pt-32 pb-16 overflow-hidden" style="background: linear-gradient(135deg, #FFF8F3 0%, #FFF0E6 50%, #FFF8F3 100%);">
+    <div class="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-[200px]"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center">
+            <nav class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-5 py-2 text-sm shadow-sm">
+                <a href="{% url 'landing:index' %}" class="text-primary hover:text-primary-dark transition-colors">Home</a>
+                <span class="text-text-secondary">/</span>
+                <span class="text-text-primary font-medium">{{ page_title }}</span>
+            </nav>
+            <h1 class="mt-8 text-4xl sm:text-5xl font-bold text-dark" data-aos="fade-up">
+                {{ heading|safe }}
+            </h1>
+        </div>
+    </div>
+</section>
