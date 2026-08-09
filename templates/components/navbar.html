@@ -10,12 +10,12 @@
 
             <!-- Desktop Menu -->
             <div class="hidden lg:flex items-center space-x-8">
-                <a href="{% url 'landing:index' %}" class="nav-link-custom active">Home</a>
-                <a href="{% url 'landing:about' %}" class="nav-link-custom">About</a>
+                <a href="{% url 'landing:index' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'index' %}active{% endif %}">Home</a>
+<a href="{% url 'landing:about' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
 
                 <!-- Services Dropdown -->
                 <div class="relative group">
-                    <a href="{% url 'landing:services'%}" class="nav-link-custom inline-flex items-center">
+<a href="{% url 'landing:services' %}" class="nav-link-custom inline-flex items-center {% if request.resolver_match.url_name == 'services' %}active{% endif %}">
                         Services
                         <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -47,9 +47,8 @@
                     </div>
                 </div>
 
-                <a href="{% url 'landing:features'%}" class="nav-link-custom">Features</a>
-                <a href="{% url 'landing:faq'%}" class="nav-link-custom">FAQ</a>
-            </div>
+<a href="{% url 'landing:features' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'features' %}active{% endif %}">Features</a>
+<a href="{% url 'landing:faq' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'faq' %}active{% endif %}">FAQ</a>            </div>
 
             <!-- Contact Button (Desktop) -->
             <div class="hidden lg:block">
